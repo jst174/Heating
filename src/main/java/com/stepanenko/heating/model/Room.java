@@ -2,11 +2,8 @@ package com.stepanenko.heating.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
-import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -20,4 +17,7 @@ public class Room {
     private String number;
     private String name;
     private int temperature;
+    @ManyToOne
+    @JoinColumn(name = "floor_id", nullable = false)
+    private Floor floor;
 }

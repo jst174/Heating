@@ -1,6 +1,6 @@
 package com.stepanenko.heating.rest;
 
-import com.stepanenko.heating.Service.RoomService;
+import com.stepanenko.heating.service.RoomService;
 import com.stepanenko.heating.model.Room;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class RoomRestControllerV1 {
 
     @PostMapping
     public ResponseEntity<Room> saveRoom(@RequestBody Room room) {
-        roomService.create(room);
+        roomService.save(room);
         return new ResponseEntity<>(room, HttpStatus.CREATED);
     }
 
@@ -34,5 +34,17 @@ public class RoomRestControllerV1 {
     public ResponseEntity<List<Room>> getRooms() {
         List<Room> rooms = roomService.getAll();
         return new ResponseEntity<>(rooms, HttpStatus.OK);
+    }
+
+    @PutMapping
+    public ResponseEntity<Room> updateRoom(@RequestBody Room room) {
+        roomService.save(room);
+        return new ResponseEntity<>(room, HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Room> deleteRoom(@PathVariable Long id) {
+        roomService.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
