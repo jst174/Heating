@@ -25,7 +25,7 @@ public class RoomRestControllerV1 {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Room> getRoom(@PathVariable Long id){
+    public ResponseEntity<Room> getRoom(@PathVariable Long id) {
         Room room = roomService.getById(id);
         return new ResponseEntity<>(room, HttpStatus.OK);
     }
