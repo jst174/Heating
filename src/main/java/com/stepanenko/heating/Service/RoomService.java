@@ -19,7 +19,7 @@ public class RoomService {
         this.roomRepository = roomRepository;
     }
 
-    public void create(Room room) {
+    public void save(Room room) {
         roomRepository.save(room);
     }
 
@@ -30,5 +30,9 @@ public class RoomService {
 
     public List<Room> getAll() {
         return roomRepository.findAll();
+    }
+
+    public void delete(Long id) {
+        roomRepository.deleteById(id);
     }
 }
