@@ -1,6 +1,6 @@
 package com.stepanenko.heating.rest;
 
-import com.stepanenko.heating.Service.RoomService;
+import com.stepanenko.heating.service.RoomService;
 import com.stepanenko.heating.model.Room;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
