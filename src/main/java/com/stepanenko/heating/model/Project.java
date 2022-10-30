@@ -13,7 +13,7 @@ public class Project {
 
     private Long id;
     private String name;
-    private Building building;
+    private Section building;
     private ClimateData climateData;
 
 }

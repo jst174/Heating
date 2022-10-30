@@ -11,20 +11,15 @@ import java.util.Set;
 
 @Getter
 @Setter
-@ToString
 @Entity
-@Table(name = "floors")
-public class Floor {
+@Table(name = "sections")
+public class Section {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int number;
     private double height;
-    private double highMark;
-    @ManyToOne
-    @JoinColumn(name = "section_id", nullable = false)
-    private Section section;
-    @OneToMany(mappedBy = "floor")
-    private Set<Room> rooms;
+    @OneToMany(mappedBy = "section")
+    private Set<Floor> floors;
+
 }
