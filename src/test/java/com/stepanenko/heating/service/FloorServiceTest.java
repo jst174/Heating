@@ -44,8 +44,8 @@ public class FloorServiceTest {
         when(floorRepository.findById(10L)).thenReturn(Optional.empty());
 
         Exception exception = assertThrows(EntityNotFoundException.class, () -> floorService.getById(10L));
-        String expectedMessage = "Floor with id = 10 is not founded";
 
+        String expectedMessage = "Floor with id = 10 is not founded";
         assertEquals(expectedMessage, exception.getMessage());
     }
 
