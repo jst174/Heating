@@ -55,7 +55,7 @@ public class Floor {
             return this;
         }
 
-        public Builder setName(int number) {
+        public Builder setNumber(int number) {
             floor.setNumber(number);
             return this;
         }

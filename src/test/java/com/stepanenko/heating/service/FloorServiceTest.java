@@ -69,14 +69,14 @@ public class FloorServiceTest {
 
         Floor floor1 = new Floor.Builder()
                 .setId(1L)
-                .setName(2)
+                .setNumber(2)
                 .setHeight(3)
                 .setHighMark(3.5)
                 .build();
 
         Floor floor2 = new Floor.Builder()
                 .setId(2L)
-                .setName(3)
+                .setNumber(3)
                 .setHeight(4)
                 .setHighMark(7)
                 .build();
