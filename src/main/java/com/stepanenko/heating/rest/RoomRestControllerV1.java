@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RestController
@@ -25,7 +26,7 @@ public class RoomRestControllerV1 {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Room> getRoom(@PathVariable Long id) {
+    public ResponseEntity<Room> getRoom(@PathVariable Long id) throws EntityNotFoundException {
         Room room = roomService.getById(id);
         return new ResponseEntity<>(room, HttpStatus.OK);
     }
