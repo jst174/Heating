@@ -29,7 +29,7 @@ public class SectionService {
     public Section getById(Long id) {
         log.info("IN SectionService getById {}", id);
         return sectionRepository.findById(id).orElseThrow(() ->
-                new EntityNotFoundException(format("Section with id %s is not founded", id)));
+                new EntityNotFoundException(format("Section with id = %s is not founded", id)));
     }
 
     public List<Section> getAll() {

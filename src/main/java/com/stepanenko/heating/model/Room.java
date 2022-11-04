@@ -19,6 +19,7 @@ public class Room {
     private String number;
     private String name;
     private int temperature;
+    private double square;
     @ManyToOne
     @JoinColumn(name = "floor_id", nullable = false)
     private Floor floor;
@@ -48,6 +49,11 @@ public class Room {
 
         public Builder setTemperature(int temperature) {
             room.setTemperature(temperature);
+            return this;
+        }
+
+        public Builder setSquare(double square) {
+            room.setSquare(square);
             return this;
         }
 
