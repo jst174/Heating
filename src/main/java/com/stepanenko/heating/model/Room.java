@@ -51,7 +51,7 @@ public class Room {
             return this;
         }
 
-        public Room build(){
+        public Room build() {
             return room;
         }
     }

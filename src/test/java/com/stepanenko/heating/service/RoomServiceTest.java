@@ -33,11 +33,6 @@ public class RoomServiceTest {
     }
 
     @Test
-    public void givenRoomWithExistentName_whenSave_thenNotUniqueNameExceptionThrow(){
-
-    }
-
-    @Test
     public void givenRoomWithExistentNumber_whenSave_thenNotUniqueNumberExceptionThrow(){
 
     }
